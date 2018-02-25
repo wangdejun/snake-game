@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="snake.css">
+  <style>
+    #container,
+    #panel {
+      float: left;
+    }
+    #panel {
+      padding-left: 20px;
+    }
+    #score {
+      color: red
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <div id="panel">
+    <button type="button" id="start">Start</button>
+    <button type="button" id="pause">Pause</button>
+    <button type="button" id="recover">Recover</button>
+    <select id='speed-pick'>
+      <option value="100">急速</option>
+      <option value="200">快速</option>
+      <option value="300" selected="selected">常速</option>
+      <option value="400">慢速</option>
+      <option value="500">龟速</option>
+    </select>
+
+    <p>Score: <span id="score">0</span></p>
+  </div>
+  <script src="./node_modules/object.observe/dist/object-observe.js"></script>
+  <script src="./snake.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

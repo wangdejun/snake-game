@@ -1,0 +1,26 @@
+table {
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+  }
+  
+  td {
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+    width: 20px;
+    height: 20px;
+    border-radius: 10%;
+    padding:0px;
+    margin:0px;
+  }
+  
+  .space {
+    background-color: white;
+  }
+  
+  .body {
+    background-color: black;
+  }
+  
+  .food {
+    background-color: red;
+  }
