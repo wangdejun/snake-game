@@ -2,9 +2,9 @@
 
 'use strict'
 
-interface ObjectConstructor {
-    observe(beingObserved: any, callback: (update: any) => any) : void;
-}
+// interface ObjectConstructor {
+//     observe(beingObserved: any, callback: (update: any) => any) : void;
+// }
 
 module Game {
     const start : HTMLElement = document.getElementById('start')
@@ -22,15 +22,13 @@ module Game {
         this.setAttribute('disabled', 'true')
     }
 
-    const observer = (changes) => {
-        changes.forEach((change) =>{
-            console.log(change);
-            console.log(change.object[change.name])
-            if(change.name === 'score'){
-                score.textContent = change.object[change.name]
-            }
-        })
-    }
+    // const observer = (changes) => {
+    //     changes.forEach((change) =>{
+    //         if(change.name === 'score'){
+    //             score.textContent = change.object[change.name]
+    //         }
+    //     })
+    // }
 
-    Object.observe(snake, observer)
+    // Object.observe(snake, observer)
 }

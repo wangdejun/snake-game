@@ -9,6 +9,14 @@ var Game;
             this.col = col;
             this.offsets = [[-1, 0], [0, -1], [+1, 0], [0, +1]];
         }
+        random() {
+            let pos = {
+                x: Math.floor(Math.random() * this.col),
+                y: Math.floor(Math.random() * this.row)
+            };
+            let block = this.getBlock(pos);
+            return block;
+        }
         get all() {
             return this.blocks;
         }
@@ -26,14 +34,6 @@ var Game;
                     return true;
                 }
             })[0];
-        }
-        random() {
-            let pos = {
-                x: Math.floor(Math.random() * this.col),
-                y: Math.floor(Math.random() * this.row)
-            };
-            let block = this.getBlock(pos);
-            return block;
         }
         genFood() {
             let block = this.random();

@@ -10,7 +10,6 @@ module Game {
         x:number
         y:number
     }
-
     const enum Direction{
         left, up, right, down
     }
@@ -31,6 +30,15 @@ module Game {
             this.offsets = [[-1,0], [0,-1], [+1, 0], [0, +1]]
         }
 
+        private random(): Block{
+            let pos: Pos = {
+                x: Math.floor(Math.random()*this.col),
+                y: Math.floor(Math.random()*this.row)
+            }
+            let block: Block = this.getBlock(pos)
+            return block;
+        }
+        
         public get all(){
             return this.blocks;
         }
@@ -50,16 +58,6 @@ module Game {
                         return true
                     }
             })[0]
-        }
-
-        private random(): Block{
-            let pos: Pos = {
-                x: Math.floor(Math.random()*this.col),
-                y: Math.floor(Math.random()*this.row)
-            }
-            let block: Block = this.getBlock(pos)
-
-            return block;
         }
 
         public genFood(): void{
