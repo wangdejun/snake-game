@@ -1,6 +1,5 @@
 # snake-game
 
-
 - use the command below to compile the .ts file
 ```
 tsc
