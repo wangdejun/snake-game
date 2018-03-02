@@ -29,3 +29,10 @@ const [favColor, secondFavColor, ...otherColors] = colors;
 console.log(favColor);
 console.log(secondFavColor);
 console.log(otherColors);
+
+
+const doIt = (a,b,...c)=>{
+    console.dir(c);
+}
+
+doIt(1,2,3,4,5);
