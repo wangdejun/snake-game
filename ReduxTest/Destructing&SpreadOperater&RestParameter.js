@@ -36,3 +36,11 @@ const doIt = (a,b,...c)=>{
 }
 
 doIt(1,2,3,4,5);
+
+
+//spread operater
+const nums = [1,2,3,4,5];
+const enumIt = (a,b,c,d,e)=>{
+    console.log(a,b,c,d,e);
+};
+enumIt(a,b,...nums);
